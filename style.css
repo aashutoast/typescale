@@ -1,11 +1,13 @@
+/* CHANGE VALUE HERE FOR DESKTOP - START */
+
 :root {
     /* Root-Level Base (Default for h1–h6, p) */
-    --root-font-body: 16px;
-    --root-scale-ratio: 1.25;
+    --root-font-body: 1rem;
+    --root-scale-ratio: 1.175;
 
     /* Class-Level Base (For .h1, .h2, .body-md, etc.) */
     --class-font-body: 18px;
-    --class-scale-ratio: 1.333;
+    --class-scale-ratio: 1.200;
 
     /* Computed Root Font Sizes */
     --root-h6: calc(var(--root-font-body) * var(--root-scale-ratio));
@@ -24,23 +26,25 @@
     --class-h1: calc(var(--class-h2) * var(--class-scale-ratio));
 }
 
+/* CHANGE VALUE HERE FOR DESKTOP - END */
+
 /* Tablet (Medium Screens) */
 @media (max-width: 1024px) {
     :root {
-        --root-font-body: 14px;
-        --root-scale-ratio: 1.2;
-        --class-font-body: 16px;
-        --class-scale-ratio: 1.3;
+        --root-font-body: 1rem;
+        --root-scale-ratio: 1.150;
+        --class-font-body: 18px;
+        --class-scale-ratio: 1.125;
     }
 }
 
 /* Mobile (Small Screens) */
 @media (max-width: 768px) {
     :root {
-        --root-font-body: 12px;
-        --root-scale-ratio: 1.15;
-        --class-font-body: 14px;
-        --class-scale-ratio: 1.25;
+        --root-font-body: 1rem;
+        --root-scale-ratio: 1.25;
+        --class-font-body: 18px;
+        --class-scale-ratio: 1.067;
     }
 }
 
