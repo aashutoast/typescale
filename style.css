@@ -2,7 +2,7 @@
 
 :root {
     /* Root-Level Base (Default for h1–h6, p) */
-    --root-font-body: 1rem;
+    --root-font-body: 16px;
     --root-scale-ratio: 1.175;
 
     /* Class-Level Base (For .h1, .h2, .body-md, etc.) */
@@ -31,7 +31,7 @@
 /* Tablet (Medium Screens) */
 @media (max-width: 1024px) {
     :root {
-        --root-font-body: 1rem;
+        --root-font-body: 16px;
         --root-scale-ratio: 1.150;
         --class-font-body: 18px;
         --class-scale-ratio: 1.125;
@@ -41,7 +41,7 @@
 /* Mobile (Small Screens) */
 @media (max-width: 768px) {
     :root {
-        --root-font-body: 1rem;
+        --root-font-body: 16px;
         --root-scale-ratio: 1.25;
         --class-font-body: 18px;
         --class-scale-ratio: 1.067;
