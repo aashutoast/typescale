@@ -6,12 +6,14 @@
     --class-scale-ratio: 1.200;
     
     /* HEADING DEFAULTS */
+    --class-heading-font: Arial, sans-serif;
     --class-heading-weight: 700;
     --class-heading-leading: 1.2;
     --class-heading-color: inherit;
     --class-heading-tracking: -0.02em;
     
     /* BODY TEXT DEFAULTS */
+    --class-body-font: Arial, sans-serif;
     --class-body-weight: 400;
     --class-body-leading: 1.6;
     --class-body-color: inherit;
@@ -53,6 +55,7 @@
 
 /* HEADING CLASSES */
 .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--class-heading-font);
     font-weight: var(--class-heading-weight);
     line-height: var(--class-heading-leading);
     color: var(--class-heading-color);
@@ -69,6 +72,7 @@
 
 /* BODY TEXT CLASSES */
 .body-sm, .body-md, .body-lg {
+    font-family: var(--class-body-font);
     font-weight: var(--class-body-weight);
     line-height: var(--class-body-leading);
     color: var(--class-body-color);
