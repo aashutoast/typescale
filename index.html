@@ -1,98 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typography Scale CSS</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Typescale v2 Documentation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Your v2.css -->
+    <link href="v2.css" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        .example-box {
+            border-left: 4px solid #0d6efd;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 0 4px 4px 0;
+        }
+        .variable-table {
+            font-size: 0.9rem;
+        }
+        .variable-table code {
+            background-color: #f1f1f1;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+        }
+        .type-sample {
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+        .color-swatch {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            border: 1px solid #dee2e6;
+            vertical-align: middle;
+            margin-right: 8px;
         }
     </style>
 </head>
+<body class="body-md">
+    <div class="container py-5">
+        <header class="text-center mb-5">
+            <h1 class="h1 mb-3">Typescale v2</h1>
+            <p class="body-lg">A modern, class-based typography system with complete control</p>
+        </header>
 
-<body class="bg-gray-100">
-    <header class="bg-white shadow-md py-6">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h1 class="font-bold text-gray-900">Typography Scale CSS</h1>
-            <p class="text-gray-600 mt-2">A scalable and customizable typography system for your projects.</p>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-6 py-12">
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 class="font-semibold text-gray-900 mb-4">Why Use This CSS?</h2>
-            <p class="text-gray-700">This CSS system provides a structured way to scale typography dynamically across
-                different screen sizes using CSS variables. It ensures readability and consistency in your UI design.
-            </p>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 class="font-semibold text-gray-900 mb-4">Implementation Guide</h2>
-            <ol class="list-decimal list-inside text-gray-700 space-y-2">
-                <li>Download the CSS file using the button below.</li>
-                <li>Link it in your HTML file: <code class="bg-gray-200 p-1 rounded">&lt;link rel="stylesheet" href="style.css"&gt;</code></li>
-                <li>Apply the typography classes or use the root variables directly.</li>
-            </ol>
-            <div class="mt-6">
-                <a href="style.css" download="style.css"
-                    class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition-all inline-block">
-                    Download CSS File
-                </a>
-            </div>
-        </section>
-
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 class="font-semibold text-gray-900 mb-4">What’s Included in the CSS File?</h2>
-            <p class="text-gray-700 mb-4">The provided CSS file defines a scalable typography system using CSS variables. It includes:</p>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>Custom properties (<code>--root-font-body</code>, <code>--root-scale-ratio</code>, etc.)</li>
-                <li>Responsive typography adjustments for desktop, tablet, and mobile breakpoints</li>
-                <li>Root-level typography styles for <code>h1</code> to <code>h6</code> and <code>p</code></li>
-                <li>Class-based typography styles for utility-based usage</li>
-                <li>Body text variations: <code>.body-sm</code>, <code>.body-md</code>, <code>.body-lg</code></li>
+        <section class="mb-5">
+            <h2 class="h2 mb-4">Introduction</h2>
+            <p>Typescale v2 is a complete redesign of our typography system that:</p>
+            <ul>
+                <li>Uses only class-based styling (no automatic element styling)</li>
+                <li>Provides granular control over all typography aspects</li>
+                <li>Maintains perfect vertical rhythm</li>
+                <li>Works seamlessly with Bootstrap's layout system</li>
             </ul>
+            
+            <div class="alert alert-primary mt-4">
+                <strong>Key Change in v2:</strong> Removed all root-level element styling (h1-h6, p tags). You must now use classes (.h1-.h6, .body-sm/.md/.lg) for consistent typography.
+            </div>
 
-            <h3 class="font-semibold text-gray-900 mt-6 mb-4">Available Classes</h3>
-            <p class="text-gray-700 mb-4">You can use the following classes to apply predefined typography styles:</p>
-            <div class="bg-gray-100 p-4 rounded-lg">
-                <pre class="whitespace-pre-wrap text-gray-700">
-        .h1 { font-size: var(--class-h1); }
-        .h2 { font-size: var(--class-h2); }
-        .h3 { font-size: var(--class-h3); }
-        .h4 { font-size: var(--class-h4); }
-        .h5 { font-size: var(--class-h5); }
-        .h6 { font-size: var(--class-h6); }
-        .body-sm { font-size: calc(var(--class-font-body) / var(--class-scale-ratio)); }
-        .body-md { font-size: var(--class-font-body); }
-        .body-lg { font-size: calc(var(--class-font-body) * var(--class-scale-ratio)); }
-                </pre>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+    <a href="v2.css" download="typescale-v2.css" class="btn btn-primary me-md-2">
+        <i class="bi bi-download me-2"></i> Download v2.css
+    </a>
+</div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h2 mb-4">Core Concepts</h2>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="h4 mb-3">Modular Scale</h3>
+                    <p>The system uses a modular scale based on:</p>
+                    <ul>
+                        <li><code>--class-font-body</code>: Base font size (default: 18px)</li>
+                        <li><code>--class-scale-ratio</code>: Scaling ratio (default: 1.2)</li>
+                    </ul>
+                    <p>This creates harmonious relationships between all text elements.</p>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <h3 class="h4 mb-3">Separate Controls</h3>
+                    <p>Independent control over:</p>
+                    <ul>
+                        <li>Headings (.h1-.h6)</li>
+                        <li>Body text (.body-sm, .body-md, .body-lg)</li>
+                    </ul>
+                    <p>Each with their own size, weight, line-height, color and letter-spacing.</p>
+                </div>
             </div>
         </section>
 
-        <section class="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h3 class="font-semibold text-gray-900 mb-4">Preview</h3>
-            <p class="text-gray-700 mb-4">Below is a live preview of how different typography classes will appear.</p>
-            <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <h1 class="h1 text-gray-900">This is H1 Heading</h1>
-                <h2 class="h2 text-gray-900">This is H2 Heading</h2>
-                <h3 class="h3 text-gray-900">This is H3 Heading</h3>
-                <h4 class="h4 text-gray-900">This is H4 Heading</h4>
-                <h5 class="h5 text-gray-900">This is H5 Heading</h5>
-                <h6 class="h6 text-gray-900">This is H6 Heading</h6>
-                <p class="body-sm text-gray-700 mt-4">This is small body text.</p>
-                <p class="body-md text-gray-700">This is medium body text.</p>
-                <p class="body-lg text-gray-700">This is large body text.</p>
+        <section class="mb-5">
+            <h2 class="h2 mb-4">Customization Variables</h2>
+            
+            <h3 class="h4 mb-3">Global Variables</h3>
+            <div class="table-responsive mb-4">
+                <table class="table variable-table">
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>--class-font-body</code></td>
+                            <td>18px</td>
+                            <td>Base font size for body text</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-scale-ratio</code></td>
+                            <td>1.2</td>
+                            <td>Multiplier for type scale</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3 class="h4 mb-3">Heading Variables</h3>
+            <div class="table-responsive mb-4">
+                <table class="table variable-table">
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>--class-heading-font</code></td>
+                            <td>Arial, sans-serif</td>
+                            <td>Font family for all headings</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-heading-weight</code></td>
+                            <td>700</td>
+                            <td>Font weight for all headings</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-heading-leading</code></td>
+                            <td>1.2</td>
+                            <td>Line-height for headings</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-heading-color</code></td>
+                            <td>inherit</td>
+                            <td>Text color for headings</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-heading-tracking</code></td>
+                            <td>-0.02em</td>
+                            <td>Letter-spacing for headings</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3 class="h4 mb-3">Body Text Variables</h3>
+            <div class="table-responsive">
+                <table class="table variable-table">
+                    <thead>
+                        <tr>
+                            <th>Variable</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>--class-body-font</code></td>
+                            <td>Arial, sans-serif</td>
+                            <td>Font family for all body text</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-body-weight</code></td>
+                            <td>400</td>
+                            <td>Font weight for body text</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-body-leading</code></td>
+                            <td>1.6</td>
+                            <td>Line-height for body text</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-body-color</code></td>
+                            <td>inherit</td>
+                            <td>Text color for body text</td>
+                        </tr>
+                        <tr>
+                            <td><code>--class-body-tracking</code></td>
+                            <td>0</td>
+                            <td>Letter-spacing for body text</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
-    </main>
 
-    <footer class="bg-white shadow-md py-6 mt-12 text-center text-gray-600">
-        <p>Contact ashishbiz@pm.me for more details.</p>
-    </footer>
+        <section class="mb-5">
+            <h2 class="h2 mb-4">Type Classes</h2>
+            
+            <h3 class="h3 mb-3">Heading Classes</h3>
+            <div class="example-box mb-4">
+                <div class="type-sample">
+                    <h1 class="h1">Heading 1</h1>
+                    <code>.h1</code>
+                </div>
+                <div class="type-sample">
+                    <h2 class="h2">Heading 2</h2>
+                    <code>.h2</code>
+                </div>
+                <div class="type-sample">
+                    <h3 class="h3">Heading 3</h3>
+                    <code>.h3</code>
+                </div>
+                <div class="type-sample">
+                    <h4 class="h4">Heading 4</h4>
+                    <code>.h4</code>
+                </div>
+                <div class="type-sample">
+                    <h5 class="h5">Heading 5</h5>
+                    <code>.h5</code>
+                </div>
+                <div class="type-sample">
+                    <h6 class="h6">Heading 6</h6>
+                    <code>.h6</code>
+                </div>
+            </div>
+            
+            <h3 class="h3 mb-3">Body Text Classes</h3>
+            <div class="example-box">
+                <div class="type-sample">
+                    <p class="body-lg">Large body text</p>
+                    <code>.body-lg</code>
+                </div>
+                <div class="type-sample">
+                    <p class="body-md">Regular body text (default)</p>
+                    <code>.body-md</code>
+                </div>
+                <div class="type-sample">
+                    <p class="body-sm">Small body text</p>
+                    <code>.body-sm</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h2 class="h2 mb-4">Implementation Examples</h2>
+            
+            <h3 class="h3 mb-3">Customizing Variables</h3>
+            <div class="example-box mb-4">
+                <pre><code>:root {
+    /* Base settings */
+    --class-font-body: 17px;
+    --class-scale-ratio: 1.25;
+    
+    /* Heading settings */
+    --class-heading-weight: 800;
+    --class-heading-leading: 1.3;
+    --class-heading-color: #2a2a2a;
+    --class-heading-tracking: -0.03em;
+    
+    /* Body settings */
+    --class-body-weight: 350;
+    --class-body-leading: 1.7;
+    --class-body-color: #444;
+    --class-body-tracking: 0.01em;
+}</code></pre>
+            </div>
+            
+            <h3 class="h3 mb-3">Responsive Adjustments</h3>
+            <div class="example-box">
+                <pre><code>@media (max-width: 1024px) {
+    :root {
+        --class-font-body: 16px;
+        --class-scale-ratio: 1.2;
+        --class-heading-leading: 1.25;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --class-font-body: 15px;
+        --class-body-leading: 1.8;
+        --class-heading-tracking: -0.01em;
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <footer class="mt-5 pt-4 text-muted text-center">
+            <p class="body-sm">Typescale v2 - A robust typography system for modern web projects</p>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
