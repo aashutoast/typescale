@@ -256,23 +256,25 @@
             
             <h3 class="h3 mb-3">Customizing Variables</h3>
             <div class="example-box mb-4">
-                <pre><code>:root {
-    /* Base settings */
-    --class-font-body: 17px;
-    --class-scale-ratio: 1.25;
-    
-    /* Heading settings */
-    --class-heading-weight: 800;
-    --class-heading-leading: 1.3;
-    --class-heading-color: #2a2a2a;
-    --class-heading-tracking: -0.03em;
-    
-    /* Body settings */
-    --class-body-weight: 350;
-    --class-body-leading: 1.7;
-    --class-body-color: #444;
-    --class-body-tracking: 0.01em;
-}</code></pre>
+                <pre><code>/* Tablet (Medium Screens) */
+                    @media (max-width: 1024px) {
+                        :root {
+                            --class-font-body: 18px;
+                            --class-scale-ratio: 1.125;
+                            --class-heading-leading: 1.25;
+                            --class-body-leading: 1.5;
+                        }
+                    }
+                    
+                    /* Mobile (Small Screens) */
+                    @media (max-width: 768px) {
+                        :root {
+                            --class-font-body: 18px;
+                            --class-scale-ratio: 1.067;
+                            --class-heading-leading: 1.3;
+                            --class-body-leading: 1.6;
+                        }
+                }</code></pre>
             </div>
             
             <h3 class="h3 mb-3">Responsive Adjustments</h3>
