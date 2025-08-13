@@ -2,7 +2,9 @@
 
 :root {
     /* CLASS-BASED TYPOGRAPHY BASE */
+    /* You can change the font body size (base value), which will also impact the overall hierarchy sizing, but the ideal base font size should be between 16px and 18px. */
     --class-font-body: 18px;
+    /* Refer to typescale.com to pick the most appropriate ratio from the scale. You can also tune the ratio and font size for tablet and mobile. Check out code lines 38 and 48 below. */
     --class-scale-ratio: 1.200;
     
     /* HEADING DEFAULTS */
